@@ -34,9 +34,12 @@ export default function LoginPage() {
 
           {/* Tabs */}
           <div className="flex items-center gap-6 text-sm">
-            <button className="border-b-2 border-transparent pb-1 font-bold text-black">
+            <Link
+              href="/"
+              className="text-muted-foreground pb-1 font-medium transition-colors hover:text-black"
+            >
               Log in
-            </button>
+            </Link>
             <Link
               href="/sign-up"
               className="text-muted-foreground pb-1 font-medium transition-colors hover:text-black"
@@ -47,13 +50,6 @@ export default function LoginPage() {
 
           {/* Form */}
           <LoginForm />
-
-          {/* Footer Links */}
-          <div className="mt-4 flex flex-col items-center gap-4 text-sm font-medium text-gray-700">
-            <Link href="/forgot" className="hover:underline">
-              Forgot password?
-            </Link>
-          </div>
         </div>
       </div>
     </div>
