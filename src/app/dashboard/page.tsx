@@ -1,12 +1,9 @@
-import { getSession } from "@/server/better-auth/server";
-import { redirect } from "next/navigation";
+import AuthGuard from "@/components/auth/AuthGuard";
 
 export default async function Dashboard() {
-  const session = await getSession();
-
-  if (!session) {
-    redirect("/");
-  }
-
-  return <h1>Welcome {session.user.name}</h1>;
+  return (
+    <AuthGuard>
+      <h1>dashboard</h1>
+    </AuthGuard>
+  );
 }
