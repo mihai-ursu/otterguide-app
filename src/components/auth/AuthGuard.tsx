@@ -6,11 +6,11 @@ export default async function AuthGuard({
 }: {
   children: React.ReactNode;
 }) {
-  const session = await getSession();
-
-  if (!session) {
-    redirect("/");
-  }
+  //TODO: Re-enable authguard in prod
+  // const session = await getSession();
+  // if (!session) {
+  //   redirect("/");
+  // }
 
   return <>{children}</>;
 }
